@@ -31,3 +31,34 @@ iconCart.addEventListener('click',() => {
 closeCart.addEventListener('click',() => {
     body.classList.toggle('showCart');
 })
+document.addEventListener("DOMContentLoaded", () => {
+  const selectLocationBtn = document.getElementById("select-location-btn");
+  const locationDropdown = document.getElementById("location-dropdown");
+  const closeDropdownMark = document.getElementById("close-dropdown");
+
+  // Toggle the dropdown visibility when the select location button is clicked
+  selectLocationBtn.addEventListener("click", () => {
+      locationDropdown.style.display = "block";
+  });
+
+  // Close the dropdown when the close mark (×) is clicked
+  closeDropdownMark.addEventListener("click", () => {
+      locationDropdown.style.display = "none";
+  });
+
+  // Close the dropdown when clicking outside of it
+  document.addEventListener("click", (event) => {
+      const isClickInside = locationDropdown.contains(event.target) || selectLocationBtn.contains(event.target);
+      if (!isClickInside) {
+          locationDropdown.style.display = "none";
+      }
+  });
+});
+document.getElementById('loginLink').addEventListener('click', function(event) {
+  event.preventDefault(); // Prevent navigation to login.html
+  alert('The page is under maintenance.');
+});
+document.getElementById('videbtn').addEventListener('click', function() {
+  alert('The video is not available.');
+});
+
