@@ -393,10 +393,15 @@ footer {
     display: block;
     right: 20px;
   }
-  .openToggle,.closeToggle {
+  .openToggle {
     display: block;
     font-size: 1.7rem;
     position: absolute;
+  }
+  .closeToggle{
+    display:none;
+    font-size:1.7rem;
+    position:absolute;
   }
   .rightClose {
     display: none;
