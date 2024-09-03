@@ -62,3 +62,20 @@ document.getElementById('videbtn').addEventListener('click', function() {
   alert('The video is not available.');
 });
 
+
+
+let openToggle = document.querySelector(".openToggle")
+let closeToggle = document.querySelector(".closeToggle")
+let rightClose = document.querySelector(".rightClose")
+
+openToggle.addEventListener("click",()=>{
+  openToggle.style.display = "none"
+  rightClose.classList.toggle("visible")
+  closeToggle.style.display = "block"
+})
+
+closeToggle.addEventListener("click",()=>{
+  openToggle.style.display = "block"
+  rightClose.classList.toggle("visible")
+  closeToggle.style.display = "none"
+})
